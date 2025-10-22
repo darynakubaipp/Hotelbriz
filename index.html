@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Готель "Морський Бриз" - Головна</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="image/beach.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/page1.css">
+    <link rel="stylesheet" href="fonts/name.css">
+    <link rel="stylesheet" href="fonts/title.css">
+</head>
+<body>
+
+    <!-- Хедер сайту -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="image/beach.png" alt="Логотип Морський Бриз">
+                <span class="great-vibes-regular">Морський Бриз</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="pages/rooms.html">Номери</a></li>
+                    <li><a href="pages/services.html">Послуги</a></li>
+                    <li><a href="pages/contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основний контент сторінки -->
+    <main>
+        <!-- Секція "Герой" (головний екран) -->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <h1 class="lobster-regular">Відпочинок, на який ви заслуговуєте</h1>
+                <p>Зануртесь в атмосферу комфорту та спокою на березі моря.</p>
+                <a href="pages/rooms.html" class="btn-primary">Переглянути номери</a>
+            </div>
+        </section>
+
+        <!-- Секція "Про нас" -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <h2>Про наш готель</h2>
+                <div class="about-wrapper">
+                    <div class="about-image">
+                        <img src="image/hotel.jpg" alt="Інтер'єр готелю Морський Бриз">
+                    </div>
+                    <div class="about-text">
+                        <p>Заснований у 2010 році, наш готель пройшов шлях від невеликої сімейної вілли до перлини узбережжя, зберігши при цьому атмосферу затишку та гостинності. "Морський Бриз" — це сучасний комплекс, що пропонує своїм гостям неперевершений сервіс та незабутні враження. Тут ви знайдете все для ідеального відпочинку: від комфортабельних номерів до вишуканого ресторану та спа-центру. Ми подбали про кожну деталь, щоб ваше перебування було максимально приємним.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секція "Переваги" -->
+        <section class="features-section">
+            <div class="container">
+                <h2>Чому обирають нас</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="image/umbrella.gif" alt="Іконка парасольки">
+                        </div>
+                        <h3>Перша лінія</h3>
+                        <p>Наш готель розташований на самому березі моря, що гарантує неймовірні краєвиди.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="image/sun.gif" alt="Іконка сонця">
+                        </div>
+                        <h3>Сонячні тераси</h3>
+                        <p>Засмагайте та насолоджуйтесь коктейлями на наших просторих терасах з видом на море.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="image/toast.gif" alt="Іконка спа">
+                        </div>
+                        <h3>Спа та релакс</h3>
+                        <p>Відновіть сили у нашому сучасному спа-центрі з широким вибором процедур.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секція бронювання -->
+        <section class="booking-section" id="booking">
+            <div class="container">
+                <h2>Забронюйте свій відпочинок</h2>
+                <p class="booking-subtitle">Залиште свої дані, і наш менеджер зв'яжеться з вами найближчим часом.</p>
+                <!-- При відправці ця форма перезавантажує сторінку (оскільки не вказано атрибут action), через що відбувається прокрутка догори. -->
+                <form class="booking-form" action="">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Ваше ім'я" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Номер телефону" required pattern="[0-9]{10,12}" title="Введіть 10 або 12 цифр номера. Наприклад: 0991234567 або 380991234567">
+                    </div>
+                    <button type="submit" class="btn-primary">Відправити запит</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер сайту -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="image/beach.png" alt="Логотип Морський Бриз">
+                        <span class="great-vibes-regular">Морський Бриз</span>
+                    </a>
+                    <p>Ваш ідеальний відпочинок на березі моря. Комфорт, сервіс та незабутні враження.</p>
+                </div>
+                <div class="footer-column footer-links">
+                    <h4>Навігація</h4>
+                    <ul>
+                        <li><a href="#home">Головна</a></li>
+                        <li><a href="pages/rooms.html">Номери</a></li>
+                        <li><a href="pages/services.html">Послуги</a></li>
+                        <li><a href="pages/contacts.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact">
+                    <h4>Контакти</h4>
+                    <p>вул. Морська, 1<br>м. Одеса, Україна</p>
+                    <p><a href="tel:+380991234567">+38 (099) 123-45-67</a></p>
+                </div>
+                <div class="footer-column footer-social">
+                    <h4>Слідкуйте за нами</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/doshchukkkkk_?igsh=aXFzMWFseTB0c2Ux&utm_source=qr" target="_blank" rel="noopener noreferrer"><img src="image/instagram.png" alt="Instagram"></a>
+                        <a href="https://youtube.com/@doshchuk?si=lTO3nOMGpGuagKow" target="_blank" rel="noopener noreferrer"><img src="image/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Готель "Морський Бриз". Всі права захищено.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

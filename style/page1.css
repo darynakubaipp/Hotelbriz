@@ -1,0 +1,487 @@
+/* Загальні стилі */
+/* Стилі для всього тіла документа */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Загальний контейнер для центрування контенту по ширині */
+/* Контейнер, що обмежує ширину контенту та центрує його */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Основний контейнер хедера, що фіксується вгорі сторінки */
+/* Стилі для хедера та навігації */
+/* Основний контейнер хедера, що фіксується вгорі сторінки */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Внутрішній контейнер хедера для вирівнювання лого та навігації */
+/* Внутрішній контейнер хедера для вирівнювання лого та навігації */
+.main-header .container {
+    display: flex;
+    justify-content: space-between; /* Повертаємо для правильного розташування */
+    align-items: center;
+}
+
+/* Стилі для посилання-логотипу в хедері */
+/* Контейнер для логотипу */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0a4d68;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Стилі для текстової частини логотипу */
+.logo span {
+    font-size: 32px;
+}
+
+/* Стилі для зображення логотипу */
+.logo img {
+    height: 40px;
+    margin-right: 12px;
+}
+
+/* Стилі для списку навігаційних посилань */
+/* Контейнер для списку навігації */
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+/* Стилі для окремого елемента списку навігації */
+.main-nav li {
+    margin-left: 30px;
+}
+
+/* Стилі для навігаційних посилань */
+.main-nav a {
+    text-decoration: none;
+    color: #0a4d68;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid #0a4d68;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+/* Стилі при наведенні курсора на навігаційне посилання */
+.main-nav a:hover {
+    color: #ffffff;
+    background-color: #088395;
+    border-color: #088395;
+    box-shadow: 0 4px 10px rgba(8, 131, 149, 0.2);
+}
+
+/* Головний блок-заставка на весь екран */
+/* Секція "Герой" (головний екран) */
+/* Головний блок-заставка на весь екран */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: white;
+    padding-top: 80px; /* Відступ для фіксованого хедера */
+
+
+    background: 
+        linear-gradient(135deg, rgba(5, 191, 219, 0.3), rgba(8, 131, 149, 0.4)),
+        url('../image/sea.jpg');
+    
+    background-size: cover; /* Масштабує зображення, щоб воно покривало всю секцію */
+    background-position: center; /* Центрує зображення */
+    background-attachment: fixed; /* Створює ефект паралаксу при прокрутці */
+}
+
+/* Стилі для заголовка всередині hero-секції */
+/* Контейнер для контенту всередині hero-секції (заголовок, текст, кнопка) */
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Стилі для параграфа всередині hero-секції */
+.hero-content p {
+    font-size: 20px;
+    margin: 0 auto 40px;
+    max-width: 600px;
+}
+
+/* Стилі для основної кнопки заклику до дії */
+/* Основна кнопка заклику до дії */
+.btn-primary {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #088395;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Стилі при наведенні курсора на основну кнопку */
+.btn-primary:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+}
+
+/* Контейнер для секції "Про наш готель" */
+/* Секція "Про нас" */
+/* Контейнер для секції "Про наш готель" */
+.about-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Стилі для заголовка секції "Про нас" */
+/* Заголовок секції "Про нас" */
+.about-section h2 {
+    font-size: 36px;
+    color: #0a4d68;
+    margin-bottom: 40px;
+}
+
+/* Flex-контейнер для зображення та тексту в секції "Про нас" */
+.about-wrapper {
+    /* Flex-контейнер для зображення та тексту в секції "Про нас" */
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Простір між картинкою та текстом */
+    text-align: left;
+}
+
+/* Контейнер для зображення готелю в секції "Про нас" */
+.about-image {
+    /* Контейнер для зображення готелю */
+    flex: 1; /* Займає доступний простір */
+    min-height: 300px; /* Мінімальна висота, щоб блок був видимим */
+    background-color: #e0eef1; /* Тимчасовий фон-заглушка */
+    border-radius: 8px;
+    /* Стилі для зображення всередині */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ховає частини зображення, що виходять за межі */
+}
+
+/* Стилі для зображення всередині контейнера about-image */
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Масштабує зображення, зберігаючи пропорції */
+}
+
+/* Контейнер для текстового опису готелю в секції "Про нас" */
+.about-text {
+    /* Контейнер для текстового опису готелю */
+    flex: 1; /* Займає доступний простір */
+}
+
+/* Стилі для параграфа в секції "Про нас" */
+.about-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Контейнер для секції "Чому обирають нас" */
+/* Секція "Переваги" */
+/* Контейнер для секції "Чому обирають нас" */
+.features-section {
+    padding: 80px 0;
+    background-color: #f4f7f6;
+}
+
+/* Стилі для заголовка секції "Переваги" */
+/* Заголовок секції "Переваги" */
+.features-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #0a4d68;
+    margin-bottom: 50px;
+}
+
+/* Flex-контейнер для карток з перевагами */
+/* Grid-контейнер для карток з перевагами */
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Стилі для окремої картки з перевагою */
+/* Окрема картка з перевагою */
+.feature-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Стилі при наведенні курсора на картку переваги */
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер для іконки переваги */
+.feature-icon {
+    margin-bottom: 20px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стилі для зображення іконки переваги */
+.feature-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Стилі для заголовка в картці переваги */
+.feature-item h3 {
+    font-size: 22px;
+    color: #0a4d68;
+    margin-bottom: 15px;
+}
+
+/* Стилі для параграфа в картці переваги */
+.feature-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Контейнер для секції з формою бронювання */
+/* Секція бронювання */
+/* Контейнер для секції з формою бронювання */
+.booking-section {
+    padding: 80px 0;
+    background-color: #e3f2fd; /* Використовуємо світло-блакитний фон */
+}
+
+/* Стилі для заголовка секції бронювання */
+/* Заголовок секції бронювання */
+.booking-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #0a4d68;
+    margin-bottom: 15px;
+}
+
+/* Стилі для підзаголовка (опису) секції бронювання */
+/* Підзаголовок (опис) секції бронювання */
+.booking-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Стилі для контейнера форми бронювання */
+/* Контейнер самої форми бронювання */
+.booking-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для групи елементів форми (одне поле вводу) */
+/* Група елементів форми (одне поле вводу) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Стилі для полів вводу в формі бронювання */
+.booking-form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box; /* Важливо для правильного розрахунку ширини */
+    transition: border-color 0.3s ease;
+}
+
+/* Стилі при фокусі на полі вводу в формі бронювання */
+.booking-form input:focus {
+    outline: none;
+    border-color: #088395;
+    box-shadow: 0 0 0 3px rgba(8, 131, 149, 0.1);
+}
+
+/* Футер (нижній колонтитул) */
+/* Основний контейнер футера */
+/* Основний контейнер футера */
+.main-footer {
+    background-color: #0a4d68;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+/* Контейнер для основного контенту футера (колонки) */
+/* Контейнер для основного контенту футера (колонки) */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 40px;
+}
+
+/* Стилі для окремої колонки у футері */
+/* Окрема колонка у футері */
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Логотип у футері */
+/* Стилі для посилання-логотипу у футері */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Стилі для зображення логотипу у футері */
+.footer-logo img {
+    height: 35px;
+    margin-right: 10px;
+}
+
+/* Стилі для параграфа в колонці "Про нас" у футері */
+/* Текст у колонці "Про нас" */
+.footer-about p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #cce3e8;
+}
+
+/* Стилі для заголовків колонок у футері */
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Стилі для списків посилань у футері */
+/* Списки посилань у футері */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Стилі для окремого елемента списку посилань у футері */
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+/* Стилі для посилань у футері (навігація та контакти) */
+/* Посилання у футері */
+.footer-links a, .footer-contact a {
+    color: #cce3e8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Стилі при наведенні курсора на посилання у футері */
+.footer-links a:hover, .footer-contact a:hover {
+    color: #ffffff;
+}
+
+/* Стилі для параграфа в колонці контактів у футері */
+/* Текст у колонці контактів */
+.footer-contact p {
+    margin: 0 0 10px;
+    line-height: 1.7;
+    color: #cce3e8;
+}
+
+/* Стилі для заголовка колонки соціальних мереж у футері */
+/* Колонка з іконками соцмереж */
+.footer-social h4 {
+    margin-bottom: 20px;
+}
+
+/* Стилі для контейнера іконок соціальних мереж */
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Стилі для посилання-іконки соціальної мережі */
+.social-icons a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Стилі при наведенні курсора на іконку соціальної мережі */
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+/* Стилі для зображення іконки соціальної мережі */
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Найнижча частина футера з копірайтом */
+.footer-bottom {
+    /* Найнижча частина футера з копірайтом */
+    text-align: center;
+}
+
+/* Стилі для тексту копірайту у футері */
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #cce3e8;
+}
