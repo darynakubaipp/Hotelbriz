@@ -459,3 +459,20 @@
   left: -8px;
   background-color: #000;
 }
+
+/* --- Адаптивність --- */
+
+/* Для планшетів та мобільних телефонів (до 992px) */
+@media (max-width: 992px) {
+    /* Блок послуги: зображення та текст стають в одну колонку */
+    .service-block,
+    .service-block.reverse {
+        grid-template-columns: 1fr;
+        grid-template-areas: "image" "content"; /* Завжди однаковий порядок: фото зверху */
+        gap: 30px;
+    }
+
+    .service-content {
+        text-align: center; /* Центруємо текст під зображенням */
+    }
+}

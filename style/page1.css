@@ -485,3 +485,64 @@ body {
     font-size: 14px;
     color: #cce3e8;
 }
+
+/* --- Адаптивність --- */
+
+/* Для планшетів та невеликих екранів (до 992px) */
+@media (max-width: 992px) {
+    /* Зменшуємо розмір шрифту в hero-секції */
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    /* Секція "Про нас": зображення та текст стають в колонку */
+    .about-wrapper {
+        flex-direction: column;
+    }
+
+    /* Футер: колонки стають в один ряд, готуючись до вертикального стеку */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        min-width: 100%;
+        align-items: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Для мобільних телефонів (до 768px) */
+@media (max-width: 768px) {
+    /* Хедер: логотип і навігація розташовуються в колонку */
+    .main-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Зменшуємо відступи в навігації */
+    .main-nav li {
+        margin-left: 15px;
+    }
+    .main-nav li:first-child {
+        margin-left: 0;
+    }
+
+    /* Змінюємо відступи для hero-секції, щоб врахувати вищий хедер */
+    .hero-section {
+        padding-top: 140px; /* Більший відступ для хедера, що став у 2 ряди */
+    }
+
+    /* Зменшуємо розмір шрифту в hero-секції ще більше */
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 18px;
+    }
+}
