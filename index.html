@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Готель "Морський Бриз" - Головна</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="image/beach.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/page1.css">
+    <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="fonts/name.css">
     <link rel="stylesheet" href="fonts/title.css">
 </head>
+
 <body>
 
-    <!-- Хедер сайту -->
+    
     <header class="main-header">
+        <!-- Контейнер для центрування контенту хедера -->
         <div class="container">
+            <!-- Логотип, який є посиланням на головну сторінку -->
             <a href="index.html" class="logo">
                 <img src="image/beach.png" alt="Логотип Морський Бриз">
                 <span class="great-vibes-regular">Морський Бриз</span>
             </a>
+            <!-- Навігаційне меню сайту -->
             <nav class="main-nav">
                 <ul>
                     <li><a href="#home">Головна</a></li>
@@ -30,11 +33,11 @@
             </nav>
         </div>
     </header>
-
-    <!-- Основний контент сторінки -->
+   
     <main>
-        <!-- Секція "Герой" (головний екран) -->
+        <!-- Секція "Герой" - головний екран з фоновим зображенням та закликом до дії -->
         <section class="hero-section" id="home">
+            <!-- Контент всередині секції "Герой" -->
             <div class="hero-content">
                 <h1 class="lobster-regular">Відпочинок, на який ви заслуговуєте</h1>
                 <p>Зануртесь в атмосферу комфорту та спокою на березі моря.</p>
@@ -42,14 +45,16 @@
             </div>
         </section>
 
-        <!-- Секція "Про нас" -->
         <section class="about-section" id="about">
             <div class="container">
                 <h2>Про наш готель</h2>
+                <!-- Обгортка для гнучкого розташування зображення та тексту -->
                 <div class="about-wrapper">
+                    <!-- Блок із зображенням готелю -->
                     <div class="about-image">
                         <img src="image/hotel.jpg" alt="Інтер'єр готелю Морський Бриз">
                     </div>
+                    <!-- Блок з текстовим описом -->
                     <div class="about-text">
                         <p>Заснований у 2010 році, наш готель пройшов шлях від невеликої сімейної вілли до перлини узбережжя, зберігши при цьому атмосферу затишку та гостинності. "Морський Бриз" — це сучасний комплекс, що пропонує своїм гостям неперевершений сервіс та незабутні враження. Тут ви знайдете все для ідеального відпочинку: від комфортабельних номерів до вишуканого ресторану та спа-центру. Ми подбали про кожну деталь, щоб ваше перебування було максимально приємним.</p>
                     </div>
@@ -57,11 +62,13 @@
             </div>
         </section>
 
-        <!-- Секція "Переваги" -->
+        <!-- Секція "Переваги" - ключові особливості готелю -->
         <section class="features-section">
             <div class="container">
                 <h2>Чому обирають нас</h2>
+                <!-- Сітка для відображення карток з перевагами -->
                 <div class="features-grid">
+                    <!-- Перша перевага -->
                     <div class="feature-item">
                         <div class="feature-icon">
                             <img src="image/umbrella.gif" alt="Іконка парасольки">
@@ -69,6 +76,7 @@
                         <h3>Перша лінія</h3>
                         <p>Наш готель розташований на самому березі моря, що гарантує неймовірні краєвиди.</p>
                     </div>
+                    <!-- Друга перевага -->
                     <div class="feature-item">
                         <div class="feature-icon">
                             <img src="image/sun.gif" alt="Іконка сонця">
@@ -76,6 +84,7 @@
                         <h3>Сонячні тераси</h3>
                         <p>Засмагайте та насолоджуйтесь коктейлями на наших просторих терасах з видом на море.</p>
                     </div>
+                    <!-- Третя перевага -->
                     <div class="feature-item">
                         <div class="feature-icon">
                             <img src="image/toast.gif" alt="Іконка спа">
@@ -87,17 +96,20 @@
             </div>
         </section>
 
-        <!-- Секція бронювання -->
+        <!-- Секція бронювання - форма для відправки запиту -->
         <section class="booking-section" id="booking">
             <div class="container">
                 <h2>Забронюйте свій відпочинок</h2>
                 <p class="booking-subtitle">Залиште свої дані, і наш менеджер зв'яжеться з вами найближчим часом.</p>
-                <!-- При відправці ця форма перезавантажує сторінку (оскільки не вказано атрибут action), через що відбувається прокрутка догори. -->
+                <!-- Форма для збору контактних даних. Атрибут action="" означає, що дані відправляться на цю ж сторінку, що спричинить її перезавантаження. -->
                 <form class="booking-form" action="">
                     <div class="form-group">
+                        <!-- Поле для вводу імені. `required` робить його обов'язковим для заповнення. -->
                         <input type="text" name="name" placeholder="Ваше ім'я" required>
                     </div>
+                    
                     <div class="form-group">
+                        <!-- Поле для вводу телефону з валідацією. `pattern` перевіряє, чи введено від 10 до 12 цифр. -->
                         <input type="tel" name="phone" placeholder="Номер телефону" required pattern="[0-9]{10,12}" title="Введіть 10 або 12 цифр номера. Наприклад: 0991234567 або 380991234567">
                     </div>
                     <button type="submit" class="btn-primary">Відправити запит</button>
@@ -105,8 +117,7 @@
             </div>
         </section>
     </main>
-
-    <!-- Футер сайту -->
+  
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
@@ -117,6 +128,7 @@
                     </a>
                     <p>Ваш ідеальний відпочинок на березі моря. Комфорт, сервіс та незабутні враження.</p>
                 </div>
+                <!-- Колонка з навігаційними посиланнями -->
                 <div class="footer-column footer-links">
                     <h4>Навігація</h4>
                     <ul>

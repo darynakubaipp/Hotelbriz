@@ -1,0 +1,212 @@
+
+/* Головний блок-заставка на сторінці номерів */
+.rooms-hero-section {
+    display: flex; /* Використовуємо Flexbox для центрування контенту */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Займає всю висоту екрану */
+    text-align: center;
+    color: #fff;
+    background: 
+        linear-gradient(rgba(10, 77, 104, 0.4), rgba(10, 77, 104, 0.4)),
+        url('../image/backroom2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px; /* Відступ для фіксованого хедера */
+    box-sizing: border-box; /* Включає padding у розрахунок висоти */
+}
+
+/* Стилі для заголовка в hero-секції номерів */
+.rooms-hero-section h1 {
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Стилі для параграфа в hero-секції номерів */
+.rooms-hero-section p {
+    font-size: 18px;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Основна секція з номерами */
+.rooms-section {
+    padding: 60px 0;
+    background-color: #f1f8fc;
+}
+
+
+/* Контейнер для детального опису номерів */
+.room-details-container {
+    display: flex; 
+    flex-direction: column; /* Елементи розташовуються вертикально */
+    gap: 60px; /* Збільшений відступ між блоками номерів */
+}
+
+
+/* Блок одного номеру */
+.room-detail-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Дві рівні колонки */
+    gap: 40px; /* Відступ між колонками */
+    align-items: flex-start; /* Вирівнює елементи по верху */
+    background-color: #fff; 
+    border-radius: 8px; /* Закруглені кути */
+    padding: 30px; /* Внутрішній відступ */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07); 
+}
+/* Контейнер для текстової інформації про номер */
+
+.room-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.room-info h3 {
+    font-size: 28px;
+    color: #0a4d68;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.room-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.room-features { /* Характеристики номеру (площа, гості і т.д.) */
+    display: flex; /* Розташовує характеристики в ряд */
+    gap: 20px; /* Відступ між характеристиками */
+    margin-bottom: 25px; /* Відступ знизу */
+    padding-bottom: 20px; /* Внутрішній відступ знизу */
+    border-bottom: 1px solid #eef2f5; /* Розділювач */
+    flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок */
+}
+
+.feature-item {
+    font-size: 15px;
+    color: #333;
+}
+
+.feature-label {
+    font-weight: 500;
+    color: #0a4d68;
+}
+
+.room-info h4 {
+    font-size: 18px;
+    color: #0a4d68;
+    margin-bottom: 15px;
+}
+
+.room-booking-footer { /* Нижня частина блоку з ціною та кнопкою */
+    display: flex; /* Розташовує елементи в ряд */
+    justify-content: space-between; /* Розносить ціну та кнопку по краях */
+    align-items: center; /* Вирівнює елементи по центру по вертикалі */
+    margin-top: auto;
+    padding-top: 25px; /* Внутрішній відступ зверху */
+    border-top: 1px solid #eef2f5; /* Розділювач */
+}
+
+.room-price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #088395;
+}
+
+.btn-secondary { /* Кнопка "Забронювати" */
+    background-color: #088395; 
+    color: #fff; 
+    padding: 10px 20px; /* Внутрішній відступ */
+    border-radius: 50px; /* Сильно закруглені кути */
+    text-decoration: none; /* Без підкреслення */
+    font-weight: 500; /* Середня товщина шрифту */
+    font-size: 15px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавний перехід для фону та трансформації */
+}
+
+.btn-secondary:hover {
+    background-color: #05bfdb; /* Змінює колір фону при наведенні */
+    transform: translateY(-2px); /* Трохи піднімає кнопку при наведенні */
+}
+
+
+
+/* Обмежуємо висоту слайдера і робимо його акуратним */
+.owl-carousel {
+    max-height: 450px; /* Зменшуємо максимальну висоту слайдера */
+    border-radius: 8px;
+    overflow: hidden; /* Обрізає вміст, що виходить за межі */
+}
+
+/* Робимо зображення всередині слайдера адаптивними */
+.owl-carousel .item img {
+    width: 100%;
+    height: 450px; /* Встановлюємо фіксовану висоту, як у контейнера */
+    object-fit: cover; /* Зберігає пропорції, обрізаючи зайве */
+}
+
+/* Виправлення розмитості на мобільних пристроях */
+/* Цей стиль змушує браузер рендерити елементи чіткіше, не втрачаючи плавності анімації */
+.owl-carousel .owl-stage,
+.owl-carousel .owl-item {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+/* Стилізація стрілок навігації */
+.owl-theme .owl-nav [class*='owl-'] {
+    background: rgba(10, 77, 104, 0.6); /* Напівпрозорий фон */
+    color: #fff;
+    margin: 0;
+    padding: 15px 20px; /* Збільшуємо розмір самої кнопки */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+    line-height: 1; /* Вирівнюємо стрілку по центру кнопки */
+}
+
+/* Збільшуємо розмір самої іконки-стрілки всередині кнопки */
+.owl-theme .owl-nav [class*='owl-'] span {
+    font-size: 48px; 
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background: rgba(8, 131, 149, 1);
+}
+
+.owl-theme .owl-nav .owl-prev { left: 15px; }
+.owl-theme .owl-nav .owl-next { right: 15px; }
+
+/* --- Адаптивність для сторінки номерів --- */
+
+
+@media (max-width: 992px) {
+    /* Блок номеру: галерея та опис стають в одну колонку */
+    .room-detail-block {
+        grid-template-columns: 1fr; /* Робимо одну колонку замість двох */
+        gap: 30px; /* Зменшуємо відступ */
+    }
+
+    /* Зменшуємо висоту слайдера на мобільних пристроях */
+    .owl-carousel, .owl-carousel .item img {
+        height: 300px;
+    }
+
+    /* Блок з ціною та кнопкою: елементи стають в колонку */
+    .room-booking-footer {
+        flex-direction: column; /* Розташовуємо елементи один під одним */
+        gap: 15px; /* Додаємо відступ між ціною та кнопкою */
+        align-items: flex-start; /* Вирівнюємо по лівому краю */
+    }
+
+    /* Зменшуємо внутрішні відступи блоку, щоб контент не вилазив */
+    .room-detail-block {
+        padding: 20px;
+    }
+}

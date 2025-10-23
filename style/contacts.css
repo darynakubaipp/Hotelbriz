@@ -1,0 +1,225 @@
+.contacts-hero-section { /* Головний блок-заставка на сторінці контактів */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    color: #fff;
+    background:
+        linear-gradient(rgba(8, 131, 149, 0.3), rgba(8, 131, 149, 0.3)), /* Напівпрозорий синій оверлей */
+        url('../image/reception_logo.jpg'); /* Фонове зображення */
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px; /* Відступ для фіксованого хедера */
+    box-sizing: border-box;
+}
+
+/* Стилі для заголовка в hero-секції контактів */
+.contacts-hero-section h1 { 
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Стилі для параграфа в hero-секції контактів */
+.contacts-hero-section p {
+    font-size: 18px; 
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Основна секція, що містить контактні дані */
+.contact-details-section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background: linear-gradient(180deg, #e3f2fd 0%, #f1f8fc 100%);
+}
+
+
+/* Обгортка для заголовка та підзаголовка секції */
+.section-title-wrapper {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title-wrapper h2 {
+    font-size: 36px;
+    color: #0a4d68;
+    margin-bottom: 15px;
+}
+
+.section-title-wrapper p {
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Grid-контейнер для карток з контактами */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Окрема картка з контактною інформацією (напр., рецепція) */
+.contact-card {
+    background-color: #fff; 
+    border: 1px solid #dbeaf0; /* Тонка рамка */
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    overflow: hidden; /* Обрізає вміст, що виходить за межі */
+    text-align: center; /* Центрує текст */
+    width: 300px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавний перехід */
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(13, 154, 176, 0.15); /* Тінь з кольоровим акцентом */
+    border-color: #088395;
+}
+
+/* Контейнер для зображення всередині картки контакту */
+.contact-card-image {
+    width: 100%;
+    height: 200px;
+}
+
+/* Саме зображення в картці контакту */
+.contact-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-card h4 {
+    font-size: 20px;
+    color: #0a4d68;
+    margin: 20px 10px 10px; /* Відступи для заголовка картки */
+}
+
+/* Текст (номер телефону) в картці контакту */
+.contact-card p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 0 10px 25px; /* Відступи для тексту картки */
+}
+
+/* Посилання (номер телефону) в картці */
+.contact-card a {
+    font-size: 18px;
+    color: #088395; 
+    text-decoration: none; /* Без підкреслення */
+    transition: color 0.3s ease; /* Плавний перехід кольору */
+}
+
+.contact-card a:hover {
+    color: #05bfdb; /* Змінює колір при наведенні */
+    text-decoration: underline; /* Додає підкреслення при наведенні */
+}
+
+
+/* Контейнер для секції з Google Картою */
+.map-section {
+    padding-bottom: 80px;
+    padding-top: 80px;
+    background-color: #f1f8fc;
+}
+
+/* Контейнер для секції "Про власницю" */
+.owner-section { 
+    padding: 60px 0;
+    background-color: #f1f8fc;
+    text-align: center;
+}
+
+/* Контейнер для фото власниці */
+.owner-photo {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; /* Робить зображення круглим */
+    margin: 0 auto 20px; /* Центрує фото та додає відступ знизу */
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Фото власниці */
+.owner-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Робимо саме зображення круглим */
+    object-fit: cover;
+}
+
+.owner-section h3 {
+    font-size: 24px;
+    color: #0a4d68;
+    margin-bottom: 15px;
+}
+
+/* Текст у секції "Про власницю" */
+.owner-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+.map-title-wrapper { /* Обгортка для заголовка та опису над картою */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.map-title-wrapper h3 {
+    font-size: 36px;
+    color: #0a4d68;
+    margin-bottom: 15px;
+}
+
+.map-title-wrapper p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Контейнер для карти */
+.map-container { /* Адаптивний контейнер для вбудованої Google Карти */
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    padding-top: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Стилі для iframe карти, щоб вона заповнювала контейнер */
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- Адаптивність --- */
+
+/* Для мобільних телефонів (до 768px) */
+@media (max-width: 768px) {
+    /* Зменшуємо ширину карток, щоб вони краще виглядали на мобільних */
+    .contact-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
