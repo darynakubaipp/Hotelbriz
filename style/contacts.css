@@ -5,13 +5,13 @@
     min-height: 100vh;
     text-align: center;
     color: #fff;
-    background:
-        linear-gradient(rgba(8, 131, 149, 0.3), rgba(8, 131, 149, 0.3)), /* Напівпрозорий синій оверлей */
-        url('../image/reception_logo.jpg'); /* Фонове зображення */
+    background-image: url('../image/reception_logo.jpg'); /* Фонове зображення */
     background-size: cover;
     background-position: center;
     padding-top: 80px; /* Відступ для фіксованого хедера */
     box-sizing: border-box;
+    background-color: rgba(8, 131, 149, 0.3); /* Напівпрозорий синій оверлей */
+    background-blend-mode: multiply; /* Режим змішування для ефекту затемнення */
 }
 
 /* Стилі для заголовка в hero-секції контактів */

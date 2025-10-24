@@ -7,11 +7,11 @@
     min-height: 100vh; /* Займає всю висоту екрану */
     text-align: center;
     color: #fff;
-    background: 
-        linear-gradient(rgba(10, 77, 104, 0.4), rgba(10, 77, 104, 0.4)),
-        url('../image/backroom2.jpg');
+    background-image: url('../image/backroom2.jpg');
     background-size: cover;
     background-position: center;
+    background-color: rgba(10, 77, 104, 0.4); /* Колір-оверлей для затемнення */
+    background-blend-mode: multiply; /* Режим змішування для кращого ефекту */
     padding-top: 80px; /* Відступ для фіксованого хедера */
     box-sizing: border-box; /* Включає padding у розрахунок висоти */
 }

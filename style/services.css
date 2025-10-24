@@ -5,12 +5,13 @@
     min-height: 100vh; /* Висота блоку, як на інших сторінках */
     text-align: center;
     color: #fff;
-    background:
-        linear-gradient(rgba(8, 131, 149, 0.2), rgba(8, 131, 149, 0.2)), url('../image/lobi.jpg');
+    background-image: url('../image/lobi.jpg');
     background-size: cover;
     background-position: center;
     padding-top: 80px; /* Відступ для фіксованого хедера */
     box-sizing: border-box;
+    background-color: rgba(8, 131, 149, 0.2);
+    background-blend-mode: multiply;
 }
 
 /* Стилі для заголовка в hero-секції послуг */
